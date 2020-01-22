@@ -49,6 +49,11 @@ table {
 }
 
 /* Set every element's box-sizing to border-box */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|PT+Mono&display=swap');
+@main-font:'PT Mono', monospace;
+@second-font:'Open Sans Condensed', sans-serif;
+
+
 @main-color:gray;
 @secondary-color: lightgray;
 @font-head: 6.0rem;
@@ -88,6 +93,7 @@ header{
 	a{
 		text-decoration: none;
 		color: black;
+		justify-content: space-between;
 	}
 
 	@media(max-width: 500px){
@@ -102,19 +108,26 @@ header{
 	margin-top: 5%;
 	padding: 5%;
 
+	@media(max-width:500px){
+		display: flex;
+		flex-direction: column;
+	}
+
 	img{
 		width: 30%;
-		height: 30vh;
+		height: auto;
 	}
 
 	h1{
 		font-size: @font-head;
 		padding-bottom: 1%;
+		font-family: @main-font;
 	}
 
 	h2{
 		font-size: @second-head;
 		padding-bottom: 1%;
+		font-family: @second-font;
 	}
 
 	h3{
@@ -148,6 +161,11 @@ header{
 .middle-info{
 	.flex();
 	margin-top: 4%;
+
+	@media(max-width: 500px){
+		flex-direction: column;
+		align-items: center;		
+	}
 
 	.listen{
 		h1{
@@ -191,6 +209,10 @@ header{
 
 		tr{
 			border: 1px solid @secondary-color;
+
+			th{
+				padding: 1%;
+			};
 		}
 
 		.shade{

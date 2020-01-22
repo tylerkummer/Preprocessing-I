@@ -127,6 +127,20 @@ table {
   border-spacing: 0;
 }
 /* Set every element's box-sizing to border-box */
+@font-face {
+  font-family: 'Open Sans Condensed';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src: local('Open Sans Condensed Light'), local('OpenSansCondensed-Light'), url(https://fonts.gstatic.com/s/opensanscondensed/v14/z7NFdQDnbTkabZAIOl9il_O6KJj73e7Ff1GhDuXMQg.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'PT Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('PT Mono'), local('PTMono-Regular'), url(https://fonts.gstatic.com/s/ptmono/v7/9oRONYoBnWILk-9AnC8zNg.ttf) format('truetype');
+}
 html {
   box-sizing: border-box;
   font-size: 62.5%;
@@ -145,6 +159,7 @@ header {
 header a {
   text-decoration: none;
   color: black;
+  justify-content: space-between;
 }
 @media (max-width: 500px) {
   header {
@@ -158,17 +173,25 @@ header a {
   margin-top: 5%;
   padding: 5%;
 }
+@media (max-width: 500px) {
+  .name-top {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .name-top img {
   width: 30%;
-  height: 30vh;
+  height: auto;
 }
 .name-top h1 {
   font-size: 6rem;
   padding-bottom: 1%;
+  font-family: 'PT Mono', monospace;
 }
 .name-top h2 {
   font-size: 2.8rem;
   padding-bottom: 1%;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 .name-top h3 {
   font-size: 1.8rem;
@@ -196,6 +219,12 @@ header a {
   display: flex;
   justify-content: space-around;
   margin-top: 4%;
+}
+@media (max-width: 500px) {
+  .middle-info {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .middle-info .listen h1 {
   font-size: 3.8rem;
@@ -228,6 +257,9 @@ header a {
 }
 .work table tr {
   border: 1px solid lightgray;
+}
+.work table tr th {
+  padding: 1%;
 }
 .work table .shade {
   background-color: lightgray;
