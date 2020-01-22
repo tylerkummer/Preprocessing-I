@@ -151,15 +151,15 @@ html {
   width: 60%;
   font-size: 1.8rem;
 }
-header {
+header nav {
   display: flex;
   justify-content: right;
   margin-top: 3%;
 }
-header a {
+header nav a {
+  padding: 0 5%;
   text-decoration: none;
   color: black;
-  justify-content: space-between;
 }
 @media (max-width: 500px) {
   header {
