@@ -146,6 +146,12 @@ header a {
   text-decoration: none;
   color: black;
 }
+@media (max-width: 500px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 .name-top {
   border: 1px solid lightgray;
   background-color: lightgray;
@@ -162,6 +168,10 @@ header a {
 }
 .name-top h2 {
   font-size: 2.8rem;
+  padding-bottom: 1%;
+}
+.name-top h3 {
+  font-size: 1.8rem;
 }
 .name-top p {
   padding-bottom: 1%;
@@ -184,6 +194,51 @@ header a {
 }
 .middle-info {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin-top: 4%;
+}
+.middle-info .listen h1 {
+  font-size: 3.8rem;
+  margin-bottom: 1%;
+}
+.middle-info .listen p {
+  font-size: 2.4rem;
+  width: 50%;
+}
+.middle-info .good {
+  width: 150%;
+}
+.middle-info .good h1 {
+  font-size: 3.4rem;
+  margin-bottom: 1%;
+}
+.middle-info .good ul li {
+  border: 0.5px solid gray;
+  padding: 3%;
+}
+.work {
+  margin-top: 3%;
+}
+.work h1 {
+  font-size: 2.8rem;
+  padding-bottom: 1%;
+}
+.work table {
+  padding: 2% 0;
+}
+.work table tr {
+  border: 1px solid lightgray;
+}
+.work table .shade {
+  background-color: lightgray;
+}
+footer {
+  width: 95%;
+  background-color: gray;
+  padding: 3%;
+  margin-top: 3%;
+}
+footer h1 {
+  color: white;
+  text-align: center;
 }
